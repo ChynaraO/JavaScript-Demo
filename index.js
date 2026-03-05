@@ -1,16 +1,10 @@
-//Arithmetic operators
+//Assignment operators
+
 let x = 10;
-let y = 3;
-console.log(x + y);
-console.log(x - y);
-console.log(x / y);
-console.log(x * y);
-console.log(x % y);
-console.log(x ** y);
+x++;
+console.log(x);
+x = x + 5;
+console.log(x);
+x += 5;
 
-//increment
-console.log(++x);
-
-//dicrement
-console.log(--x);
-console.log(x--);
+console.log(x); //21
