@@ -1,10 +1,14 @@
-//Assignment operators
+//Comparison operators
 
-let x = 10;
-x++;
-console.log(x);
-x = x + 5;
-console.log(x);
-x += 5;
+let x = 1;
 
-console.log(x); //21
+//Relational operators
+console.log(x > 0);
+console.log(x >= 0);
+console.log(x <= 0);
+console.log(x <= 0);
+
+//Equality
+console.log(x === 1);
+console.log(x !== 1);
+
