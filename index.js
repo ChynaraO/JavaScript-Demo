@@ -1,9 +1,20 @@
 // comment
 
-let name = 'Mosh'; //typeOf String
-let age = 30;      //typeOf number
-age = 30.1;        //typeOf number
-age = 'thirty';
-let isApproved = true;  //typeOf boolean
-let firstName = undefined;  //typeOf undefined
-let lastName = null;        //typeOf Object
+//object literal
+let people = {};
+let person = {
+    name: 'Mosh',
+    age : 30
+};
+
+//dot notation
+person.age = 31;
+
+//bracket notation
+let selection = 'name';
+// person['name'] = 'Mary';
+person[selection] = 'Mary';
+
+
+console.log(person);
+console.log(people);
