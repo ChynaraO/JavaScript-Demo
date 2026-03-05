@@ -1,20 +1,8 @@
 // comment
 
-//object literal
-let people = {};
-let person = {
-    name: 'Mosh',
-    age : 30
-};
-
-//dot notation
-person.age = 31;
-
-//bracket notation
-let selection = 'name';
-// person['name'] = 'Mary';
-person[selection] = 'Mary';
-
-
-console.log(person);
-console.log(people);
+let selectedColors = ['red', 'blue'];
+console.log(selectedColors);
+selectedColors[2] = 'green';
+console.log(selectedColors[0]);
+console.log(selectedColors);
+console.log(selectedColors.length);
