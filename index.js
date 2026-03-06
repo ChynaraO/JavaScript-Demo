@@ -8,6 +8,10 @@ const person = {
 for(let key in person)
 console.log(key, person[key]);
 
-const color = ['red', 'green', 'blue'];
-for(let index in color)
-    console.log(index, color[index]);
+const colors = ['red', 'green', 'blue'];
+for(let index in colors)
+    console.log(index, colors[index]);
+
+//For of (for each)
+for(let color of colors)
+    console.log(color);
