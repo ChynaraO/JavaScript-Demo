@@ -1,17 +1,11 @@
-//For in
+let number = max(5,3);
+console.log(number);
 
-const person = {
-    name: 'Mosh',
-    age: 30
-};
+// function max(number1, number2){
+//     if(number1>number2) return number1;
+//     else return number2;
+// }
 
-for(let key in person)
-console.log(key, person[key]);
-
-const colors = ['red', 'green', 'blue'];
-for(let index in colors)
-    console.log(index, colors[index]);
-
-//For of (for each)
-for(let color of colors)
-    console.log(color);
+function max(number1, number2){
+    return (number1>number2) ? number1 : number2;
+}
