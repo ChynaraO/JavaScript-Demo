@@ -17,16 +17,18 @@ console.log(8 & 2); // bitwise &. 0
 // 00000010
 // 00000100
 
-const readPermition = 4;
-const writePermition = 2;
-const executePermition = 1;
+let role = 'gues';
 
-let myPermition = 0;
-myPermition = myPermition | writePermition;
-console.log(myPermition); //6 bitwise
+switch(role){
+    case 'guest':
+        console.log('Guest User');
+        break;
+    
+    case 'moderator':
+        console.log('Moderator User');
+        break;
 
-let message = 
-(myPermition & readPermition) ? 'yes' : 'no';
-console.log(message);
-
+    default :
+    console.log("Unknown User");
+}
 
