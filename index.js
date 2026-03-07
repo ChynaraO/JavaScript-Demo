@@ -1,13 +1,15 @@
-console.log(showPrimes(10));
+//Factory functions
 
-function showPrimes(limit){
-    for(let number = 2; number <= limit; number ++)
-        if(isPrime(number)) console.log(number);
+function createCircle(raduis){
+    return {
+        raduis,
+        draw(){
+            console.log('draw');
+        }
+    };
 }
-function isPrime (number){
-    for(let factor = 2; factor < number; factor++)
-        if(number % factor === 0)
-            return false;
+ const circle1 = createCircle(1);
+ console.log(circle1);
 
-    return true;
-}
+ const circle2 = createCircle(2);
+ console.log(circle2);
