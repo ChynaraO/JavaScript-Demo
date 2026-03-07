@@ -1,11 +1,17 @@
-let x = {value : 10};
-let y = x;     //when we use object, the address or the reference has been copied
-x.value = 20;
+const circle = {
+    radius : 1,
+    draw() {
+        console.log('draw');
+    }
+};
 
+for(let key in circle)
+    console.log(key, circle[key]);
 
-let obj = {value: 10};
-function increase(obj){
-    obj.value++;
-}
-increase(obj);
-console.log(obj); //10
+for(let key of Object.keys(circle))
+    console.log(key);
+
+for(let entry of Object.entries(circle))
+    console.log(entry);
+
+if('radius' in circle) console.log('yes');
