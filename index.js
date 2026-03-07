@@ -4,14 +4,18 @@ const circle = {
         console.log('draw');
     }
 };
+//Old approach
+// const another = {};
+// for(let key in circle)
+//     another[key] = circle[key];
 
-for(let key in circle)
-    console.log(key, circle[key]);
 
-for(let key of Object.keys(circle))
-    console.log(key);
+//New approach
+// const another = Object.assign({
+//     color: 'red'
+// }, circle);
 
-for(let entry of Object.entries(circle))
-    console.log(entry);
-
-if('radius' in circle) console.log('yes');
+//Another New approach
+//spread an object
+const another = {...circle};
+console.log(another);
