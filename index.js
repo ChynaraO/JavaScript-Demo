@@ -1,23 +1,11 @@
-function Circle(radius){
-    this.radius = radius,
-    this.draw = function(){
-        console.log('draw');
-    }
+let x = {value : 10};
+let y = x;     //when we use object, the address or the reference has been copied
+x.value = 20;
+
+
+let obj = {value: 10};
+function increase(obj){
+    obj.value++;
 }
-
-
-// const Circle1 = new Function('raduis', `
-//     this.radius = radius,
-//     this.draw = function(){
-//         console.log('draw');
-//     }
-//         `
-// );
-
-console.log(Circle);
-Circle.call({}, 1);
-Circle.apply({}, [1,2,3]);
-
-
-const another = new Circle(1);
-console.log(another);
+increase(obj);
+console.log(obj); //10
