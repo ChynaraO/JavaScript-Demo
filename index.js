@@ -1,5 +1,6 @@
 //Factory functions
-
+//Camel Notation: oneTwo
+//Pascal Notation: OneTwo
 function createCircle(raduis){
     return {
         raduis,
@@ -13,3 +14,15 @@ function createCircle(raduis){
 
  const circle2 = createCircle(2);
  console.log(circle2);
+
+ //constructor function
+ function Circle(radius){
+    this.radius = radius;
+    this.draw = function(){
+        console.log('dddd');
+    }
+ }
+
+ const circle = new Circle(4);
+ console.log(circle);
+ circle.draw();
