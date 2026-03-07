@@ -1,21 +1,5 @@
-const circle = {
-    radius : 1,
-    draw() {
-        console.log('draw');
-    }
-};
-//Old approach
-// const another = {};
-// for(let key in circle)
-//     another[key] = circle[key];
+//String primitive
+const message = 'This is my\' first message';
 
-
-//New approach
-// const another = Object.assign({
-//     color: 'red'
-// }, circle);
-
-//Another New approach
-//spread an object
-const another = {...circle};
-console.log(another);
+//String object
+const another = new String('hi');
