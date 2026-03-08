@@ -1,32 +1,11 @@
-//blog post object
+//price ranges
 
-//title
-//body
-//author
-//views
-//cmments
-//(author, body)
-//isLive
+let priceRange = [
+    {label: '$', tooltip: 'Inexpensive', minPerPerson: 0, maxPerPerson: 10},
+    {label: '$$', tooltip: 'Moderate', minPerPerson: 11, maxPerPerson: 20},
+    {label: '$$$', tooltip: 'Expensive', minPerPerson: 21, maxPerPerson: 50}
+];
 
-// let post = {
-//     title: 'a',
-//     body: 'b',
-//     author: 'c',
-//     viewa: 10,
-//     comments: [
-//         {author: 'a', body: 'b'},
-//         {author: 'c', body: 'd'}
-//     ],
-//     isLive: true
-// };
-
-function Post(title, body, author){
-    this.title = title;
-    this.body = body;
-    this.author= author;
-    this.views = 0;
-    this.comments = [];
-    this.isLive = false;
-}
-post = new Post('a', 'g', 'k');
-console.log(post);
+let restaurants = [
+    {averagePerPerson: 5}
+]
