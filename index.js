@@ -1,11 +1,16 @@
-const numbers = [1,2,3, 1, 4];
-console.log(numbers.indexOf(2));
-console.log(numbers.indexOf('5'));
-console.log(numbers.lastIndexOf(1));
-console.log(numbers.indexOf(1), 2);
+const cources = [
+    {id: 1, name: 'a'}, 
+    {id: 2, name: 'b'}, 
+];
 
-//old
-console.log(numbers.indexOf(1) !== -1);
+// console.log(cources.includes({id: 1, name: 'a'}));
 
-//new
-console.log(numbers.includes(1));
+const course = cources.find(function(course){
+    return course.name === 'a';
+});
+const course1 = cources.find(function(course){
+    return course.name === 'as';
+});
+
+console.log(course);
+console.log(course1);
