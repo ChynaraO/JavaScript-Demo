@@ -1,16 +1,10 @@
-const cources = [
-    {id: 1, name: 'a'}, 
-    {id: 2, name: 'b'}, 
-];
-
-//Arrow function syntax
-
-const course = cources.find(course => course.name === 'a');
-
-
-const course1 = cources.find(function(course){
-    return course.name === 'as';
-});
-
-console.log(course);
-console.log(course1);
+const numbers = [1,2,3,4,5,6];
+//End
+const last = numbers.pop();
+console.log(last);
+// //beginning
+const first = numbers.shift()
+console.log(first);
+// //middle
+numbers.splice(2,1);
+console.log(numbers);
