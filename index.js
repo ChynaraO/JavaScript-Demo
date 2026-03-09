@@ -1,24 +1,9 @@
-//Primitives
-const numbers = [1,3,2,4];
-numbers.sort();
-console.log(numbers);
+const numbers = [1,2,-1,3,4];
 
-numbers.reverse();
-console.log(numbers);
+const allPositive = numbers.every(function(number){
+return number >= 0;});
+console.log(allPositive);
 
-//Objects
-
-const cources = [
-    {id: 1, name: 'Node.js'},
-    {id: 2, name: 'JavaScript'},
-];
-
-cources.sort(function(a,b){
-const nameA = a.name.toLowerCase();
-const nameB = b.name.toLowerCase();
-if (nameA < nameB) return -1;
-if (nameA > nameB) return 1;
-return 0;
-});
-console.log(cources);
-
+const atLeastOnePositive = numbers.some(function(number){
+return number >= 0;});
+console.log(atLeastOnePositive);
