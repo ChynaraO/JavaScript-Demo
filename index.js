@@ -1,13 +1,24 @@
-const first = [1,2,3,4];
-const second = [5,6,7];
+//Primitives
+const numbers = [1,3,2,4];
+numbers.sort();
+console.log(numbers);
 
-const joined = first.join(',');
-console.log(joined);
+numbers.reverse();
+console.log(numbers);
 
-const message= 'this is my first message';
-const parts = message.split(' ');
-console.log(parts);
+//Objects
 
-const combined = parts.join('-');
-console.log(combined);
+const cources = [
+    {id: 1, name: 'Node.js'},
+    {id: 2, name: 'JavaScript'},
+];
+
+cources.sort(function(a,b){
+const nameA = a.name.toLowerCase();
+const nameB = b.name.toLowerCase();
+if (nameA < nameB) return -1;
+if (nameA > nameB) return 1;
+return 0;
+});
+console.log(cources);
 
