@@ -1,12 +1,13 @@
-const first = [{id: 1}];
+const first = [1,2,3,4];
 const second = [5,6,7];
 
-const combined = first.concat(second);
-first[0].id = 10;
+//spread operator
+const combined = [...first,'a',...second];
 console.log(combined);
 
-const slice = combined.slice();
-const slice1 = combined.slice(2);
-console.log(slice);
-console.log(slice1);
+// const copy = combined.slice();
+const copy = [...combined];
+
+console.log(copy);
+
 
