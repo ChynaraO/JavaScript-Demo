@@ -1,18 +1,12 @@
-let numbers = [1,2,3,4,5,6];
+const first = [{id: 1}];
+const second = [5,6,7];
 
-//Emtying an Array only if it has the only reference
-//Option 1
-numbers = [];
+const combined = first.concat(second);
+first[0].id = 10;
+console.log(combined);
 
-// Option 2
-numbers.length = 0;
+const slice = combined.slice();
+const slice1 = combined.slice(2);
+console.log(slice);
+console.log(slice1);
 
-//Option 3
-numbers.splice(0, numbers.length);
-
-//Option 4
-while(numbers.length > 0)
-    numbers.pop();
-
-
-console.log(numbers);
