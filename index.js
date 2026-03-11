@@ -1,27 +1,29 @@
 const numbers = [1,2,3,1, 4];
 
-const count = countOccurences(numbers, 1);
-console.log(count);
+const max = getMax([1,3]);
+console.log(max);
+
 //basic
-// function countOccurences(array, searchElement){
-//     let count = 0;
-//     for(let element of array)
-//         if(element === searchElement)
-//             count++;
-//     return count;
+// function getMax(array){
+//     if(array.length === 0) return undefined;
+    
+//     let max = array[0];
+//     for(let i = 1; i < array.length; i++){
+//         if(array[i] > max) 
+//             max = array[i];
+//     }
+//     return max;
 // }
 
 //reduce
-function countOccurences(array, searchElement){
-    // let count = 0;
-    // for(let element of array)
-    //     if(element === searchElement)
-    //         count++;
-    // return count;
-return array.reduce((accumulator, current) => {
-        const occurence = (current === searchElement) ? 1 : 0;
-        console.log(accumulator, current, searchElement);
-        return accumulator + occurence;
-    }, 0);
+function getMax(array){
+    if(array.length === 0) return undefined;
+    
+    // let max = array[0];
+    // for(let i = 1; i < array.length; i++){
+    //     if(array[i] > max) 
+    //         max = array[i];
+    // }
+    // return max;
+    return array.reduce((a, b) => (a > b) ? a : b);
 }
-
