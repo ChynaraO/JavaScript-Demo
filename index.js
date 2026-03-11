@@ -1,15 +1,14 @@
 const numbers = [1,2,-1,3,4];
 
-// const filtered = numbers.filter(n => n >=0);
-// const items = filtered.map(n => '<li>' + n + '</li>')
-// console.log(filtered);
-// console.log(items);
-// const html = '<ul>' + items.join('') + '</ul>';
-// console.log(html);
-const items = numbers
-    .filter(n => n >= 0)
-    .map(n => ({value: n}))
-    .filter(obj => obj.value > 1)
-    .map(obj => obj.value);
+let sum = 0;
+for(let n of numbers)
+    sum += n;
 
-console.log(items);
+console.log(sum);
+// const sum1 = numbers.reduce((accumulator, currentValue) => {
+// return accumulator + currentValue;
+// }, 0);
+
+const sum1 = numbers.reduce((accumulator, currentValue) =>
+accumulator + currentValue);
+console.log(sum1);
