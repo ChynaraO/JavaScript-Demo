@@ -1,29 +1,18 @@
-const numbers = [1,2,3,1, 4];
+const movies = [
+    {title: 'a', year: 2018, rating: 4.5},
+    {title: 'b', year: 2018, rating: 4.7},
+    {title: 'c', year: 2018, rating: 3},
+    {title: 'd', year: 2017, rating: 4.5},
+];
 
-const max = getMax([1,3]);
-console.log(max);
+//All movies in 2018 with rating > 4
+//sort them by their rating
+//Descending order
+//Pick their title
+const titles = movies
+.filter(m => m.year === 2018 && m.rating >= 4)
+.sort((a, b) => a.rating - b.rating)
+    .reverse()
+    .map(m => m.title);
 
-//basic
-// function getMax(array){
-//     if(array.length === 0) return undefined;
-    
-//     let max = array[0];
-//     for(let i = 1; i < array.length; i++){
-//         if(array[i] > max) 
-//             max = array[i];
-//     }
-//     return max;
-// }
-
-//reduce
-function getMax(array){
-    if(array.length === 0) return undefined;
-    
-    // let max = array[0];
-    // for(let i = 1; i < array.length; i++){
-    //     if(array[i] > max) 
-    //         max = array[i];
-    // }
-    // return max;
-    return array.reduce((a, b) => (a > b) ? a : b);
-}
+console.log(titles);
